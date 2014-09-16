@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sheeps &amp; Rams</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>	
+	<div id="game-container">
+		<h1 class="title">sheeps vs rams</h1>
+		
+		<p class="description">
+			Sheeps and Rams (also known as Bulls and Cows) is an old code-breaking game. A random four-digit number (secret number) with different digits is generated automatically. Your goal is to guess that number. Enter four different digits in the field below. The leftmost digit must not be 0 (zero).
+		</p>
+		<p class="description">
+			Sheep means that a digit from your number is contained in secret number, but not on the same position. If two such digits exists, the sheep are 2.
+		</p>
+		<p class="description">
+			Ram means that a digit from your number is contained in secret number and it is on the same position. If two such digits exists, the rams are 2.
+		</p>
+		
+		<button id="toggle-description" class="btn">Show the rules</button>
+		<button id="show-scoreboard" class="btn">Show scoreboard</button>
+
+		<div id="controls">
+			<label for="user-input">
+				Guess the number <br>
+				<span>( Enter four different digits )</span>
+			</label>
+			<p><input type="text" id="user-input" maxlength="4"></p>
+			<button id="submit-user-input" class="btn">Check</button>
+			<h3 id="user-feedback"></h3>
+		</div><!-- /controls -->
+	</div> <!-- /game-container -->
+
+	<div id="success-screen">
+		<h1 class="title">success</h1>
+		<p></p>
+		<label for="user-name">Enter your name to the scoreboard</label>
+		<input type="text" id="user-name" placeholder="name">
+		<button id="user-name-submit" class="btn">Submit</button>
+	</div>
+
+	<div id="scoreboard">
+		<h1 class="title">scoreboard</h1>
+		<ul id="scores">
+		</ul>
+		<button id="close-scoreboard" class="btn">Close</button>
+		<button id="clear-score-board" class="btn">Clear scoreboard</button>
+	</div>
+
+
+	<script src="scripts/libs/require.js" data-main="scripts/main"></script>
+</body>
+</html>
